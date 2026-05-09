@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИталияДом — Переезд в Италию</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 64px; overflow: hidden;
+  }
+  .hero-left {
+    padding: 80px 64px 80px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--terracotta); margin-bottom: 24px;
+  }
+  .hero-tag::before { content: ''; display: block; width: 24px; height: 1px; background: var(--terracotta); }
+  .hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(44px, 5vw, 68px); font-weight: 600;
+    line-height: 1.08; letter-spacing: -1px;
+    color: var(--charcoal); margin-bottom: 28px;
+  }
+  .hero-title em { color: var(--terracotta); font-style: italic; }
+  .hero-sub { font-size: 17px; color: var(--stone); line-height: 1.6; max-width: 440px; margin-bottom: 44px; font-weight: 300; }
+  .hero-actions { display: flex; gap: 16px; align-items: center; }
+  .hero-stats { display: flex; gap: 40px; margin-top: 56px; padding-top: 40px; border-top: 0.5px solid var(--border); }
+  .hero-stat-num { font-family: var(--font-serif); font-size: 36px; font-weight: 600; color: var(--charcoal); line-height: 1; }
+  .hero-stat-label { font-size: 12px; color: var(--stone-light); margin-top: 4px; letter-spacing: 0.3px; }
+  .hero-right { background: var(--cream); position: relative; overflow: hidden; }
+  .hero-img-container { width: 100%; height: 100%; position: relative; }
+  .hero-img-container img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+  .hero-img-overlay {
+    position: absolute; bottom: 48px; left: 48px; right: 48px;
+    background: rgba(253,252,249,0.92); backdrop-filter: blur(8px);
+    border-radius: 12px; padding: 24px 28px;
+    border: 0.5px solid rgba(255,255,255,0.8);
+  }
+  .hero-card-title { font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; }
+  .hero-card-sub { font-size: 12px; color: var(--stone); }
+  .hero-card-badge { display: inline-block; background: #E8F5E9; color: #2E7D32; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-top: 10px; }
+
+  @media (max-width: 1100px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 60px 32px 48px; }
+    .hero-right { min-height: 400px; }
+  }
+  @media (max-width: 640px) {
+    .hero-left { padding: 48px 20px 40px; }
+    .hero-title { font-size: 34px; letter-spacing: -0.3px; }
+    .hero-sub { font-size: 15px; margin-bottom: 28px; }
+    .hero-actions { flex-direction: column; gap: 12px; }
+    .hero-stats { gap: 20px; margin-top: 36px; padding-top: 28px; flex-wrap: wrap; }
+    .hero-stat-num { font-size: 28px; }
+    .hero-right { min-height: 240px; }
+    .hero-img-overlay { bottom: 14px; left: 14px; right: 14px; padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav"></nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag fade-up">Переезд в Италию</div>
+    <h1 class="hero-title fade-up delay-1">
+      Жизнь в <em>Италии</em><br>с профессиональным сопровождением
+    </h1>
+    <p class="hero-sub fade-up delay-2">
+      Сопровождаем от первого звонка до получения ПМЖ. Работаем с гражданами России, Украины, Казахстана, Беларуси и других стран СНГ.
+    </p>
+    <div class="hero-actions fade-up delay-3">
+      <a href="contact.html" class="btn-primary">Рассчитать вариант переезда</a>
+      <a href="services.html" class="btn-ghost">Посмотреть услуги</a>
+    </div>
+    <div class="hero-stats fade-up delay-4">
+      <div><div class="hero-stat-num">800+</div><div class="hero-stat-label">переехавших семей</div></div>
+      <div><div class="hero-stat-num">8 лет</div><div class="hero-stat-label">опыта в Италии</div></div>
+      <div><div class="hero-stat-num">97%</div><div class="hero-stat-label">одобренных заявок</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-container">
+      <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=900&q=80" alt="Верона, Италия" onerror="this.style.background='#E8E0D0'">
+      <div class="hero-img-overlay">
+        <div class="hero-card-title">Верона, Венето</div>
+        <div class="hero-card-sub">Одно из популярных направлений для переезда семей из СНГ</div>
+        <div class="hero-card-badge">✓ Шенгенская зона</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS STRIP -->
+<div class="benefits-strip">
+  <div class="benefit-item"><div class="benefit-icon">🏥</div>Бесплатная медицина для всей семьи</div>
+  <div class="benefit-item"><div class="benefit-icon">🛂</div>Свободное перемещение по Шенгену</div>
+  <div class="benefit-item"><div class="benefit-icon">🏠</div>ПМЖ через 5 лет</div>
+  <div class="benefit-item"><div class="benefit-icon">🎓</div>Образование европейского уровня</div>
+  <div class="benefit-item"><div class="benefit-icon">🇮🇹</div>Гражданство через 10 лет</div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-tag">Что мы делаем</div>
+  <h2 class="section-title">Полный спектр<br>иммиграционных услуг</h2>
+  <p class="section-sub">Берём на себя все юридические, документальные и бытовые вопросы — от визы до вашего первого итальянского завтрака.</p>
+  <div class="services-grid">
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">01</div><div class="service-icon-wrap">📋</div>
+      <div class="service-title">Вид на жительство</div>
+      <p class="service-desc">Подбираем основание под вашу ситуацию: работа, бизнес, учёба, финансовая независимость, лечение или религиозные программы.</p>
+      <div class="service-arrow">→</div>
+    </a>
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">02</div><div class="service-icon-wrap">✈️</div>
+      <div class="service-title">Визы в Италию и Шенген</div>
+      <p class="service-desc">Туристические, деловые, рабочие, учебные визы. Исключаем типичные ошибки, которые приводят к отказу консульства.</p>
+      <div class="service-arrow">→</div>
+    </a>
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">03</div><div class="service-icon-wrap">🏡</div>
+      <div class="service-title">Переезд под ключ</div>
+      <p class="service-desc">Аренда жилья, codice fiscale, прописка, банковский счёт, медстраховка — всё без вашего участия в бюрократии.</p>
+      <div class="service-arrow">→</div>
+    </a>
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">04</div><div class="service-icon-wrap">👨‍👩‍👧</div>
+      <div class="service-title">Семейная иммиграция</div>
+      <p class="service-desc">Воссоединение семьи после получения ВНЖ или одновременный переезд. Супруги, дети, родители — оформляем Nulla Osta.</p>
+      <div class="service-arrow">→</div>
+    </a>
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">05</div><div class="service-icon-wrap">🎓</div>
+      <div class="service-title">Образование</div>
+      <p class="service-desc">Поступление в итальянские вузы по направлениям: мода, дизайн, архитектура, бизнес, международные отношения.</p>
+      <div class="service-arrow">→</div>
+    </a>
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">06</div><div class="service-icon-wrap">📜</div>
+      <div class="service-title">Подтверждение диплома</div>
+      <p class="service-desc">Признание дипломов для медицины, педагогики, регулируемых профессий. Перевод, легализация, подача в органы.</p>
+      <div class="service-arrow">→</div>
+    </a>
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">07</div><div class="service-icon-wrap">📄</div>
+      <div class="service-title">Документы и легализация</div>
+      <p class="service-desc">Апостиль, консульская легализация, нотариальный перевод, справки ЗАГС — для граждан России, Украины, Казахстана.</p>
+      <div class="service-arrow">→</div>
+    </a>
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">08</div><div class="service-icon-wrap">🏢</div>
+      <div class="service-title">Бизнес в Италии</div>
+      <p class="service-desc">Регистрация компании, налоговые консультации, Lavoro Autonomo — откроем бизнес и оформим рабочий ВНЖ.</p>
+      <div class="service-arrow">→</div>
+    </a>
+    <a href="services.html" class="service-card" style="text-decoration:none;color:inherit;">
+      <div class="service-num">09</div><div class="service-icon-wrap">👦</div>
+      <div class="service-title">Сопровождение детей</div>
+      <p class="service-desc">Запись в итальянские школы и детские сады, документы для зачисления, помощь с первой адаптацией.</p>
+      <div class="service-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process" id="process">
+  <div class="section-tag">Как мы работаем</div>
+  <h2 class="section-title">От звонка до <em>ПМЖ</em><br>— пять шагов</h2>
+  <p class="section-sub">Ведём клиента на каждом этапе — вплоть до получения статуса постоянного жителя через пять лет.</p>
+  <div class="process-steps">
+    <div class="process-step active">
+      <div class="step-num">1</div>
+      <div class="step-content"><div class="step-title">Консультация</div><p class="step-desc">Разбираемся в вашей ситуации: гражданство, профессия, состав семьи, цель переезда.</p></div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">2</div>
+      <div class="step-content"><div class="step-title">Стратегия</div><p class="step-desc">Выбираем оптимальное основание и выстраиваем пошаговый план с конкретными сроками.</p></div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">3</div>
+      <div class="step-content"><div class="step-title">Документы</div><p class="step-desc">Готовим, переводим, заверяем и проверяем весь пакет перед подачей.</p></div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">4</div>
+      <div class="step-content"><div class="step-title">Подача</div><p class="step-desc">Сопровождаем в консульстве или квестуре, контролируем сроки и статус заявки.</p></div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">5</div>
+      <div class="step-content"><div class="step-title">Жизнь в Италии</div><p class="step-desc">Помогаем с жильём, школой, банком и интеграцией — остаёмся рядом после переезда.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-tag">Клиенты о нас</div>
+  <h2 class="section-title">Их переезд —<br>наш результат</h2>
+  <p class="section-sub">Реальные истории людей, которые переехали в Италию с нашей помощью.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Переехали из Алматы всей семьёй — я, муж и двое детей. Думали, что это невозможно сделать быстро. Оказалось, реально: три месяца и мы уже жили в Милане.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">АМ</div><div><div class="testimonial-name">Айгерим М.</div><div class="testimonial-meta">Алматы → Милан, 2023</div></div></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Оформил Residenza Elettiva. Команда взяла на себя абсолютно всё: от поиска квартиры до открытия счёта в банке. Я только поставил подписи.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">СК</div><div><div class="testimonial-name">Сергей К.</div><div class="testimonial-meta">Москва → Флоренция, 2024</div></div></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Поступила в университет Болоньи на дизайн. Получила студенческую визу с первого раза. Сейчас уже на втором курсе и оформляю ВНЖ самостоятельно — научили всему.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">ОД</div><div><div class="testimonial-name">Оля Д.</div><div class="testimonial-meta">Киев → Болонья, 2022</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-tag">Сделайте первый шаг</div>
+  <h2 class="section-title">Готовы переехать?<br>Давайте <em>посчитаем</em></h2>
+  <p class="section-sub">Расскажите о вашей ситуации — мы подберём оптимальный путь и назовём точные сроки и стоимость. Без воды и общих слов.</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn-primary">Получить консультацию</a>
+    <a href="contact.html" class="btn-ghost">Рассчитать стоимость</a>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+<script src="components.js"></script>
+<script>initPage('home');</script>
+</body>
+</html>

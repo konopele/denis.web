@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — ИталияДом</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── CONTACT LAYOUT ── */
+  .contact-section {
+    background: var(--warm-white);
+  }
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* LEFT COLUMN */
+  .contact-left-title {
+    font-family: var(--font-serif);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+  .contact-left-sub {
+    font-size: 16px;
+    color: var(--stone);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+  .contact-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .cc-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    border: 0.5px solid var(--border);
+    background: var(--warm-white);
+  }
+  .cc-item:hover {
+    background: var(--cream);
+    transform: translateX(4px);
+  }
+  .cc-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    border: 0.5px solid var(--border);
+  }
+  .cc-label {
+    font-size: 10px;
+    color: var(--stone-light);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .cc-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+  .contact-note {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 22px 24px;
+    font-size: 13px;
+    color: var(--stone);
+    line-height: 1.7;
+    border: 0.5px solid var(--border);
+  }
+  .contact-note strong {
+    color: var(--charcoal);
+    font-weight: 600;
+  }
+
+  /* RIGHT COLUMN — FORM */
+  .contact-form {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 48px 44px;
+    border: 0.5px solid var(--border);
+  }
+  .form-title {
+    font-family: var(--font-serif);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .form-sub {
+    font-size: 14px;
+    color: var(--stone);
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .form-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--stone);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 13px 16px;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: var(--charcoal);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(196,97,58,0.08);
+  }
+  .form-input::placeholder,
+  .form-textarea::placeholder { color: var(--stone-light); }
+  .form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B665E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+  }
+  .form-textarea {
+    resize: vertical;
+    min-height: 96px;
+    line-height: 1.6;
+  }
+  .form-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--terracotta);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 8px;
+    letter-spacing: 0.2px;
+  }
+  .form-submit:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-1px);
+  }
+  .form-footnote {
+    font-size: 12px;
+    color: var(--stone-light);
+    text-align: center;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  /* Success state */
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 56px 20px;
+  }
+  .form-success-icon { font-size: 56px; margin-bottom: 16px; }
+  .form-success-title {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+  }
+  .form-success-sub {
+    font-size: 15px;
+    color: var(--stone);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1100px) {
+    .contact-wrap {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form { padding: 36px 32px; }
+  }
+  @media (max-width: 640px) {
+    .contact-form { padding: 28px 20px; }
+    .contact-left-title { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav"></nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="section-tag fade-up">Контакты</div>
+  <h1 class="section-title fade-up delay-1">Получить<br><em>консультацию</em></h1>
+  <p class="section-sub fade-up delay-2">Первая консультация бесплатна. Разберём вашу ситуацию и предложим конкретный план переезда.</p>
+</div>
+
+<!-- BENEFITS STRIP -->
+<div class="benefits-strip">
+  <div class="benefit-item"><div class="benefit-icon">🏥</div>Бесплатная медицина для всей семьи</div>
+  <div class="benefit-item"><div class="benefit-icon">🛂</div>Свободное перемещение по Шенгену</div>
+  <div class="benefit-item"><div class="benefit-icon">🏠</div>ПМЖ через 5 лет</div>
+  <div class="benefit-item"><div class="benefit-icon">🎓</div>Образование европейского уровня</div>
+  <div class="benefit-item"><div class="benefit-icon">🇮🇹</div>Гражданство через 10 лет</div>
+</div>
+
+<!-- MAIN CONTACT SECTION -->
+<section class="contact-section">
+  <div class="contact-wrap">
+
+    <!-- LEFT: channels + note -->
+    <div>
+      <div class="section-tag">Как написать</div>
+      <h2 class="contact-left-title">Напишите в удобный<br><em style="font-family:var(--font-serif);font-style:italic;color:var(--terracotta);">мессенджер</em></h2>
+      <p class="contact-left-sub">Работаем по будням с 9:00 до 20:00 по итальянскому времени (CET). Отвечаем в течение нескольких часов.</p>
+
+      <div class="contact-channels">
+        <a href="https://t.me/alvedagroup" class="cc-item">
+          <div class="cc-icon">✈️</div>
+          <div>
+            <div class="cc-label">Telegram</div>
+            <div class="cc-value">@alvedagroup</div>
+          </div>
+        </a>
+        <a href="https://wa.me/393343034054" class="cc-item">
+          <div class="cc-icon">💬</div>
+          <div>
+            <div class="cc-label">WhatsApp</div>
+            <div class="cc-value">334 303 40 54</div>
+          </div>
+        </a>
+        <a href="https://goo.su/psYCB" class="cc-item">
+          <div class="cc-icon">📘</div>
+          <div>
+            <div class="cc-label">Facebook</div>
+            <div class="cc-value">goo.su/psYCB</div>
+          </div>
+        </a>
+        <a href="mailto:info@alvedagroup.com" class="cc-item">
+          <div class="cc-icon">✉️</div>
+          <div>
+            <div class="cc-label">Email</div>
+            <div class="cc-value">info@alvedagroup.com</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-note">
+        <strong>🕐 Время работы:</strong> Пн–Пт, 9:00–20:00 (CET, Рим)<br>
+        В выходные — на связи до 14:00 по срочным вопросам.<br><br>
+        <strong>📍 Офис:</strong> Милан, Ломбардия, Италия<br>
+        Встречи — по предварительной записи или онлайн.
+      </div>
+    </div>
+
+    <!-- RIGHT: form -->
+    <div class="contact-form" id="formWrap">
+      <div class="form-title" id="formTitle">Заявка на консультацию</div>
+      <p class="form-sub" id="formSubtitle">Заполните форму — свяжемся в течение нескольких часов.</p>
+
+      <div id="formFields">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Имя</label>
+            <input type="text" class="form-input" placeholder="Ваше имя" id="fname">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Гражданство</label>
+            <select class="form-select" id="citizenship">
+              <option value="">Выберите страну</option>
+              <option>Россия</option>
+              <option>Украина</option>
+              <option>Казахстан</option>
+              <option>Беларусь</option>
+              <option>Армения</option>
+              <option>Грузия</option>
+              <option>Другая страна СНГ</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Telegram или WhatsApp</label>
+          <input type="text" class="form-input" placeholder="@username или +7 900 000 0000" id="messenger">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Цель переезда</label>
+          <select class="form-select" id="goal">
+            <option value="">Выберите вариант</option>
+            <option>Работа (наёмный труд)</option>
+            <option>Бизнес / самозанятость</option>
+            <option>Учёба</option>
+            <option>Финансовая независимость</option>
+            <option>Воссоединение семьи</option>
+            <option>Лечение</option>
+            <option>Ещё не определился</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Состав семьи</label>
+          <select class="form-select">
+            <option value="">Выберите вариант</option>
+            <option>Один</option>
+            <option>С супругом / супругой</option>
+            <option>С детьми</option>
+            <option>Полная семья</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Комментарий (необязательно)</label>
+          <textarea class="form-textarea" placeholder="Расскажите о вашей ситуации..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Отправить заявку →</button>
+        <p class="form-footnote">Данные не передаются третьим лицам. Первая консультация — бесплатно.</p>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">🇮🇹</div>
+        <div class="form-success-title">Заявка получена!</div>
+        <p class="form-success-sub">Свяжемся с вами в течение нескольких часов по указанному мессенджеру.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" style="background:var(--cream);">
+  <div class="section-tag">Частые вопросы</div>
+  <h2 class="section-title">Отвечаем на главное</h2>
+  <div class="faq-grid">
+    <div>
+      <div class="faq-item">
+        <div class="faq-q">Сколько стоит консультация?</div>
+        <p class="faq-a">Первая консультация бесплатна. Мы разбираем вашу ситуацию, предлагаем несколько вариантов и называем стоимость сопровождения до начала работы.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Работаете с гражданами Украины и Беларуси?</div>
+        <p class="faq-a">Да. Опыт работы с гражданами России, Украины, Казахстана, Беларуси, Армении, Грузии и других стран СНГ. Знаем специфику документов каждой страны.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Как долго ждать одобрения ВНЖ?</div>
+        <p class="faq-a">Зависит от основания. Студенческий ВНЖ — от 30 до 60 дней после въезда. Рабочий — от 2 до 6 месяцев. Residenza Elettiva — от 3 месяцев.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Нужно ли знать итальянский?</div>
+        <p class="faq-a">Для большинства типов ВНЖ — нет. Для гражданства потребуется уровень B1. Сопровождаем на всех встречах с властями.</p>
+      </div>
+    </div>
+    <div>
+      <div class="faq-item">
+        <div class="faq-q">Можно ли перевезти пожилых родителей?</div>
+        <p class="faq-a">Да — через воссоединение семьи после получения вашего ВНЖ. Нужно подтвердить родство и жилищные условия. Сроки — от 2 до 6 месяцев.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Что такое codice fiscale и зачем он нужен?</div>
+        <p class="faq-a">Итальянский налоговый номер — аналог ИНН. Нужен для аренды жилья, открытия счёта, записи ребёнка в школу. Получаем его в первые дни после приезда.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Что будет, если ВНЖ не одобрят?</div>
+        <p class="faq-a">97% наших заявок одобряются. В редких случаях отказа — анализируем причину, корректируем стратегию и подаём повторно.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Помогаете с трудоустройством в Италии?</div>
+        <p class="faq-a">Да, это дополнительная услуга. Помогаем с адаптацией резюме под итальянский рынок, поиском вакансий и подготовкой к собеседованиям.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+<script src="components.js"></script>
+<script>
+  initPage('contact');
+
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const messenger = document.getElementById('messenger').value.trim();
+    if (!name || !messenger) {
+      alert('Укажите имя и мессенджер для связи');
+      return;
+    }
+    document.getElementById('formFields').style.display = 'none';
+    document.getElementById('formTitle').style.display = 'none';
+    document.getElementById('formSubtitle').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+</script>
+</body>
+</html>
