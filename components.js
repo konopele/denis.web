@@ -1,13 +1,20 @@
 function initPage(active) {
 
+  // Service pages that highlight "Услуги" as active in nav
+  const servicePages = [
+    'service-vnj','service-visas','service-relocation','service-family',
+    'service-education','service-diploma','service-documents','service-business','service-children'
+  ];
+  const servicesActive = active === 'services' || servicePages.includes(active);
+
   // NAV
   document.getElementById('nav').innerHTML = `
     <a href="index.html" class="nav-logo">Италия<span>Дом</span></a>
     <ul class="nav-links">
-      <li><a href="index.html"    ${active==='home'   ?'class="active"':''}>Главная</a></li>
-      <li><a href="services.html" ${active==='services'?'class="active"':''}>Услуги</a></li>
-      <li><a href="visas.html"    ${active==='visas'  ?'class="active"':''}>Визы и ВНЖ</a></li>
-      <li><a href="contact.html"  ${active==='contact'?'class="active"':''}>Контакты</a></li>
+      <li><a href="index.html"    ${active==='home'    ? 'class="active"' : ''}>Главная</a></li>
+      <li><a href="services.html" ${servicesActive     ? 'class="active"' : ''}>Услуги</a></li>
+      <li><a href="visas.html"    ${active==='visas'   ? 'class="active"' : ''}>Визы и ВНЖ</a></li>
+      <li><a href="contact.html"  ${active==='contact' ? 'class="active"' : ''}>Контакты</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">Получить консультацию</a>
     <button class="nav-burger" onclick="toggleMenu()" aria-label="Меню">
@@ -32,12 +39,12 @@ function initPage(active) {
       <div class="footer-col">
         <h4>Услуги</h4>
         <ul>
-          <li><a href="services.html">Вид на жительство</a></li>
-          <li><a href="services.html">Шенгенские визы</a></li>
-          <li><a href="services.html">Переезд под ключ</a></li>
-          <li><a href="services.html">Семейная иммиграция</a></li>
-          <li><a href="services.html">Образование</a></li>
-          <li><a href="services.html">Бизнес в Италии</a></li>
+          <li><a href="service-vnj.html">Вид на жительство</a></li>
+          <li><a href="service-visas.html">Шенгенские визы</a></li>
+          <li><a href="service-relocation.html">Переезд под ключ</a></li>
+          <li><a href="service-family.html">Семейная иммиграция</a></li>
+          <li><a href="service-education.html">Образование</a></li>
+          <li><a href="service-business.html">Бизнес в Италии</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -67,7 +74,7 @@ function initPage(active) {
       <a href="mailto:info@italiadom.ru">info@italiadom.ru</a>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2024 ИталияДом. Иммиграционные услуги.</div>
+      <div class="footer-copy">© 2025 ИталияДом. Иммиграционные услуги.</div>
       <div class="footer-flags">🇮🇹 🇷🇺 🇺🇦 🇰🇿 🇧🇾</div>
     </div>`;
 
