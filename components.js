@@ -1,20 +1,18 @@
 function initPage(active) {
 
-  // Service pages that highlight "Услуги" as active in nav
-  const servicePages = [
+  // NAV — "Услуги" stays active for all service sub-pages too
+  const isService = [
     'service-vnj','service-visas','service-relocation','service-family',
     'service-education','service-diploma','service-documents','service-business','service-children'
-  ];
-  const servicesActive = active === 'services' || servicePages.includes(active);
+  ].includes(active);
 
-  // NAV
   document.getElementById('nav').innerHTML = `
     <a href="index.html" class="nav-logo">Италия<span>Дом</span></a>
     <ul class="nav-links">
-      <li><a href="index.html"    ${active==='home'    ? 'class="active"' : ''}>Главная</a></li>
-      <li><a href="services.html" ${servicesActive     ? 'class="active"' : ''}>Услуги</a></li>
-      <li><a href="visas.html"    ${active==='visas'   ? 'class="active"' : ''}>Визы и ВНЖ</a></li>
-      <li><a href="contact.html"  ${active==='contact' ? 'class="active"' : ''}>Контакты</a></li>
+      <li><a href="index.html"    ${active==='home'                   ? 'class="active"' : ''}>Главная</a></li>
+      <li><a href="services.html" ${active==='services' || isService  ? 'class="active"' : ''}>Услуги</a></li>
+      <li><a href="visas.html"    ${active==='visas'                  ? 'class="active"' : ''}>Визы и ВНЖ</a></li>
+      <li><a href="contact.html"  ${active==='contact'                ? 'class="active"' : ''}>Контакты</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">Получить консультацию</a>
     <button class="nav-burger" onclick="toggleMenu()" aria-label="Меню">
@@ -40,7 +38,7 @@ function initPage(active) {
         <h4>Услуги</h4>
         <ul>
           <li><a href="service-vnj.html">Вид на жительство</a></li>
-          <li><a href="service-visas.html">Шенгенские визы</a></li>
+          <li><a href="service-visas.html">Визы в Италию и Шенген</a></li>
           <li><a href="service-relocation.html">Переезд под ключ</a></li>
           <li><a href="service-family.html">Семейная иммиграция</a></li>
           <li><a href="service-education.html">Образование</a></li>
@@ -60,18 +58,18 @@ function initPage(active) {
       <div class="footer-col">
         <h4>Контакты</h4>
         <ul>
-          <li><a href="#">Telegram</a></li>
-          <li><a href="#">WhatsApp</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="mailto:info@italiadom.ru">info@italiadom.ru</a></li>
+          <li><a href="https://t.me/alvedagroup" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://wa.me/393343034054" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/alvedagroup" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:info@alvedagroup.com">info@alvedagroup.com</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-contacts-mobile">
-      <a href="#">Telegram</a>
-      <a href="#">WhatsApp</a>
-      <a href="#">Instagram</a>
-      <a href="mailto:info@italiadom.ru">info@italiadom.ru</a>
+      <a href="https://t.me/alvedagroup" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://wa.me/393343034054" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://instagram.com/alvedagroup" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:info@alvedagroup.com">info@alvedagroup.com</a>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2025 ИталияДом. Иммиграционные услуги.</div>
