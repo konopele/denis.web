@@ -18,9 +18,9 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Вид на жительствов Италии",
+  "name": "Вид на жительство в Италии",
   "provider": {"@type": "ProfessionalService", "name": "ИталияДом", "url": "https://italiadom.ru"},
-  "description": "Помогаем получить вид на жительство в Италии: работа, бизнес, учёба, финансовая независимость, лечение. Анализ ситуации, документы, сопровождение подачи. Консультация бесплатно.",
+  "description": "Помогаем получить вид на жительство в Италии: работа, бизнес, учёба, финансовая независимость, лечение.",
   "areaServed": "IT",
   "url": "https://italiadom.ru/service-vnj.html"
 }
@@ -29,9 +29,11 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{"@type":"Question","name":"Сколько стоит первая консультация по ВНЖ?","acceptedAnswer":{"@type":"Answer","text":"Первая консультация бесплатна. Разбираем ситуацию, предлагаем варианты и называем стоимость до начала работы."}},
-{"@type":"Question","name":"Как долго ждать одобрения вида на жительство в Италии?","acceptedAnswer":{"@type":"Answer","text":"Студенческий ВНЖ — 30–60 дней. Рабочий — 2–6 месяцев. Residenza Elettiva — от 3 месяцев."}},
-{"@type":"Question","name":"Нужно ли знать итальянский язык для ВНЖ?","acceptedAnswer":{"@type":"Answer","text":"Для большинства типов ВНЖ — нет. Для гражданства потребуется уровень B1."}}]
+  "mainEntity": [
+    {"@type":"Question","name":"Сколько стоит первая консультация по ВНЖ?","acceptedAnswer":{"@type":"Answer","text":"Первая консультация бесплатна. Разбираем ситуацию, предлагаем варианты и называем стоимость до начала работы."}},
+    {"@type":"Question","name":"Как долго ждать одобрения вида на жительство в Италии?","acceptedAnswer":{"@type":"Answer","text":"Студенческий ВНЖ — 30–60 дней. Рабочий — 2–6 месяцев. Residenza Elettiva — от 3 месяцев."}},
+    {"@type":"Question","name":"Нужно ли знать итальянский язык для ВНЖ?","acceptedAnswer":{"@type":"Answer","text":"Для большинства типов ВНЖ — нет. Для гражданства потребуется уровень B1."}}
+  ]
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -49,95 +51,124 @@
 
 <div class="benefits-strip">
   <div class="benefit-item"><div class="benefit-icon">🏥</div>Бесплатная медицина для всей семьи</div>
-  <div class="benefit-item"><div class="benefit-icon">🛂</div>Свободное перемещение по Шенгену</div>
-  <div class="benefit-item"><div class="benefit-icon">🏠</div>ПМЖ через 5 лет</div>
-  <div class="benefit-item"><div class="benefit-icon">🎓</div>Образование европейского уровня</div>
+  <div class="benefit-item"><div class="benefit-icon">🛂</div>Свободное перемещение по 26 странам Шенгена</div>
+  <div class="benefit-item"><div class="benefit-icon">🏠</div>ПМЖ через 5 лет непрерывного проживания</div>
+  <div class="benefit-item"><div class="benefit-icon">🎓</div>Европейское образование для всей семьи</div>
   <div class="benefit-item"><div class="benefit-icon">🇮🇹</div>Гражданство через 10 лет</div>
 </div>
 
-<section class="services" style="padding-top:80px;">
+<section class="visas">
   <div class="section-tag">Основания для ВНЖ</div>
   <h2 class="section-title">Выбираем тип<br>под вашу ситуацию</h2>
   <p class="section-sub">Каждое основание — свои требования, сроки и документы. Подберём оптимальное после анализа вашей ситуации.</p>
-
-<div class="visa-grid">
-  <div class="visa-card">
-    <div class="visa-flag">💼</div>
-    <div class="visa-name">Работа</div>
-    <div class="visa-sub">Lavoro Subordinato / Autonomo</div>
-    <ul class="visa-features"><li>Наёмный труд или самозанятость</li>
-<li>Квота Decreto Flussi</li>
-<li>ВНЖ на 1–2 года с продлением</li>
-<li>Право привезти семью</li></ul>
+  <div class="visa-grid">
+    <div class="visa-card">
+      <div class="visa-flag">💼</div>
+      <div class="visa-name">Работа</div>
+      <div class="visa-sub">Lavoro Subordinato / Autonomo</div>
+      <ul class="visa-features">
+        <li>Наёмный труд или самозанятость</li>
+        <li>Квота Decreto Flussi (Subordinato)</li>
+        <li>ВНЖ на 1–2 года с продлением</li>
+        <li>Право привезти семью</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🎓</div>
+      <div class="visa-name">Учёба</div>
+      <div class="visa-sub">Studio / Università</div>
+      <ul class="visa-features">
+        <li>Бакалавриат, магистратура, PhD</li>
+        <li>Языковые и профессиональные курсы</li>
+        <li>Право работать 20 ч/неделю</li>
+        <li>Путь к рабочему ВНЖ после диплома</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🏖️</div>
+      <div class="visa-name">Финансовая независимость</div>
+      <div class="visa-sub">Residenza Elettiva</div>
+      <ul class="visa-features">
+        <li>Пенсионеры и рантье</li>
+        <li>Пассивный доход от €31 000/год</li>
+        <li>Свободный выбор места жительства</li>
+        <li>Не нужно работать в Италии</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">👨‍👩‍👧‍👦</div>
+      <div class="visa-name">Воссоединение семьи</div>
+      <div class="visa-sub">Ricongiungimento Familiare</div>
+      <ul class="visa-features">
+        <li>Супруги, дети до 18 лет, родители</li>
+        <li>Оформление Nulla Osta</li>
+        <li>ВНЖ на тот же срок, что у спонсора</li>
+        <li>Право на работу сразу после въезда</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🏥</div>
+      <div class="visa-name">Лечение</div>
+      <div class="visa-sub">Cure Mediche</div>
+      <ul class="visa-features">
+        <li>Лечение в итальянских клиниках</li>
+        <li>Сопровождающий по отдельной визе</li>
+        <li>Продление на период лечения</li>
+        <li>Помощь с выбором клиники</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🏢</div>
+      <div class="visa-name">Бизнес</div>
+      <div class="visa-sub">Lavoro Autonomo</div>
+      <ul class="visa-features">
+        <li>Предприниматели и фрилансеры</li>
+        <li>Без квоты Decreto Flussi</li>
+        <li>Открытие компании или P.IVA</li>
+        <li>ВНЖ на 2 года с продлением</li>
+      </ul>
+    </div>
   </div>
-  <div class="visa-card">
-    <div class="visa-flag">🎓</div>
-    <div class="visa-name">Учёба</div>
-    <div class="visa-sub">Studio / Università</div>
-    <ul class="visa-features"><li>Бакалавриат, магистратура, PhD</li>
-<li>Языковые и профессиональные курсы</li>
-<li>Право работать 20 ч/неделю</li>
-<li>Путь к рабочему ВНЖ после диплома</li></ul>
-  </div>
-  <div class="visa-card">
-    <div class="visa-flag">🏖️</div>
-    <div class="visa-name">Финансовая независимость</div>
-    <div class="visa-sub">Residenza Elettiva</div>
-    <ul class="visa-features"><li>Пенсионеры и рантье</li>
-<li>Пассивный доход от €31 000/год</li>
-<li>Свободный выбор места жительства</li>
-<li>Не нужно работать в Италии</li></ul>
-  </div>
-  <div class="visa-card">
-    <div class="visa-flag">👨‍👩‍👧‍👦</div>
-    <div class="visa-name">Воссоединение семьи</div>
-    <div class="visa-sub">Ricongiungimento Familiare</div>
-    <ul class="visa-features"><li>Супруги, дети до 18 лет, родители</li>
-<li>Оформление Nulla Osta</li>
-<li>ВНЖ на тот же срок, что у спонсора</li>
-<li>Право на работу сразу после въезда</li></ul>
-  </div>
-  <div class="visa-card">
-    <div class="visa-flag">🏥</div>
-    <div class="visa-name">Лечение</div>
-    <div class="visa-sub">Cure Mediche</div>
-    <ul class="visa-features"><li>Лечение в итальянских клиниках</li>
-<li>Сопровождающий по отдельной визе</li>
-<li>Продление на период лечения</li>
-<li>Помощь с выбором клиники</li></ul>
-  </div>
-  <div class="visa-card">
-    <div class="visa-flag">🏢</div>
-    <div class="visa-name">Бизнес</div>
-    <div class="visa-sub">Lavoro Autonomo</div>
-    <ul class="visa-features"><li>Предприниматели и фрилансеры</li>
-<li>Без квоты Decreto Flussi</li>
-<li>Открытие компании или P.IVA</li>
-<li>ВНЖ на 2 года с продлением</li></ul>
-  </div>
-</div>
 </section>
 
 <section class="process">
   <div class="section-tag">Как мы работаем</div>
-  <h2 class="section-title">От звонка до <em>результата</em><br>— четыре шага</h2>
-  <p class="section-sub">Берём на себя все этапы — вы только предоставляете документы и получаете результат.</p>
+  <h2 class="section-title">От первого звонка<br>до <em>карточки ВНЖ</em></h2>
+  <p class="section-sub">Берём на себя весь цикл — от выбора основания до получения документа на руки.</p>
+  <div class="stat-row">
+    <div class="stat-item">
+      <div class="stat-num">97%</div>
+      <div class="stat-label">заявок одобряется<br>с первого раза</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5</div>
+      <div class="stat-label">оснований для ВНЖ —<br>подберём под вашу ситуацию</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">8 лет</div>
+      <div class="stat-label">на итальянском<br>иммиграционном рынке</div>
+    </div>
+  </div>
   <div class="process-steps">
     <div class="process-step active">
       <div class="step-num">1</div>
-      <div class="step-content"><div class="step-title">Консультация</div><p class="step-desc">Разбираем вашу ситуацию, объясняем требования и называем точные сроки и стоимость.</p></div>
+      <div class="step-content"><div class="step-title">Консультация</div><p class="step-desc">Разбираем вашу ситуацию: гражданство, профессия, цель. Выбираем оптимальное основание.</p></div>
     </div>
     <div class="process-step">
       <div class="step-num">2</div>
-      <div class="step-content"><div class="step-title">Документы</div><p class="step-desc">Составляем полный список, помогаем собрать, переводим и заверяем всё необходимое.</p></div>
+      <div class="step-content"><div class="step-title">Стратегия</div><p class="step-desc">Составляем пошаговый план с конкретными сроками и полной стоимостью.</p></div>
     </div>
     <div class="process-step">
       <div class="step-num">3</div>
-      <div class="step-content"><div class="step-title">Подача</div><p class="step-desc">Сопровождаем подачу, контролируем сроки, отвечаем на запросы органов.</p></div>
+      <div class="step-content"><div class="step-title">Документы</div><p class="step-desc">Формируем, переводим и заверяем полный пакет. Проверяем каждый документ перед подачей.</p></div>
     </div>
     <div class="process-step">
       <div class="step-num">4</div>
-      <div class="step-content"><div class="step-title">Результат</div><p class="step-desc">Получаете документ на руки. Остаёмся на связи для продления и следующих шагов.</p></div>
+      <div class="step-content"><div class="step-title">Подача</div><p class="step-desc">Сопровождаем в Questura, контролируем статус заявки и отвечаем на запросы органов.</p></div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">5</div>
+      <div class="step-content"><div class="step-title">Получение</div><p class="step-desc">Карточка ВНЖ на руках. Остаёмся рядом для продления и следующих шагов.</p></div>
     </div>
   </div>
 </section>
@@ -146,12 +177,16 @@
   <div class="section-tag">Частые вопросы</div>
   <h2 class="section-title">Отвечаем на главное</h2>
   <div class="faq-grid">
-    <div><div class="faq-item"><div class="faq-q">Сколько стоит первая консультация?</div><p class="faq-a">Первая консультация бесплатна. Разбираем вашу ситуацию, предлагаем варианты и называем стоимость до начала работы.</p></div>
-<div class="faq-item"><div class="faq-q">Как долго ждать одобрения ВНЖ?</div><p class="faq-a">Зависит от основания. Студенческий — 30–60 дней. Рабочий — 2–6 месяцев с учётом квоты. Residenza Elettiva — от 3 месяцев.</p></div>
-<div class="faq-item"><div class="faq-q">Нужно ли знать итальянский?</div><p class="faq-a">Для большинства типов ВНЖ — нет. Для гражданства потребуется уровень B1. Сопровождаем на всех встречах с властями.</p></div></div>
-    <div><div class="faq-item"><div class="faq-q">Можно ли перевезти родителей?</div><p class="faq-a">Да — через воссоединение семьи после получения вашего ВНЖ. Нужно подтвердить родство и жилищные условия. Сроки — от 2 до 6 месяцев.</p></div>
-<div class="faq-item"><div class="faq-q">Что будет, если ВНЖ не одобрят?</div><p class="faq-a">97% наших заявок одобряются. В редких случаях отказа — анализируем причину, корректируем и подаём повторно.</p></div>
-<div class="faq-item"><div class="faq-q">Работаете с гражданами Украины и Казахстана?</div><p class="faq-a">Да. Опыт работы с гражданами России, Украины, Казахстана, Беларуси, Армении, Грузии и других стран СНГ.</p></div></div>
+    <div>
+      <div class="faq-item"><div class="faq-q">Сколько стоит первая консультация?</div><p class="faq-a">Первая консультация бесплатна. Разбираем вашу ситуацию, предлагаем варианты и называем стоимость до начала работы.</p></div>
+      <div class="faq-item"><div class="faq-q">Как долго ждать одобрения ВНЖ?</div><p class="faq-a">Зависит от основания. Студенческий — 30–60 дней. Рабочий — 2–6 месяцев с учётом квоты. Residenza Elettiva — от 3 месяцев.</p></div>
+      <div class="faq-item"><div class="faq-q">Нужно ли знать итальянский?</div><p class="faq-a">Для большинства типов ВНЖ — нет. Для гражданства потребуется уровень B1. Сопровождаем на всех встречах с властями.</p></div>
+    </div>
+    <div>
+      <div class="faq-item"><div class="faq-q">Можно ли перевезти родителей?</div><p class="faq-a">Да — через воссоединение семьи после получения вашего ВНЖ. Нужно подтвердить родство и жилищные условия. Сроки — от 2 до 6 месяцев.</p></div>
+      <div class="faq-item"><div class="faq-q">Что будет, если ВНЖ не одобрят?</div><p class="faq-a">97% наших заявок одобряются. В редких случаях отказа — анализируем причину, корректируем и подаём повторно.</p></div>
+      <div class="faq-item"><div class="faq-q">Работаете с гражданами Украины и Казахстана?</div><p class="faq-a">Да. Опыт работы с гражданами России, Украины, Казахстана, Беларуси, Армении, Грузии и других стран СНГ.</p></div>
+    </div>
   </div>
 </section>
 
@@ -167,6 +202,6 @@
 
 <footer id="footer"></footer>
 <script src="components.js"></script>
-<script>initPage('services');</script>
+<script>initPage('service-vnj');</script>
 </body>
 </html>

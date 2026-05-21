@@ -18,7 +18,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Переезд под ключв Италию",
+  "name": "Переезд под ключ в Италию",
   "provider": {"@type": "ProfessionalService", "name": "ИталияДом", "url": "https://italiadom.ru"},
   "description": "Организуем переезд в Италию от А до Я: подбор жилья, codice fiscale, регистрация по адресу, открытие банковского счёта, медицинская страховка, сопровождение в госорганах.",
   "areaServed": "IT",
@@ -29,9 +29,11 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{"@type":"Question","name":"Что нужно сделать сразу после переезда в Италию?","acceptedAnswer":{"@type":"Answer","text":"Получить codice fiscale, зарегистрироваться по адресу (Residenza), открыть банковский счёт и оформить медицинскую страховку."}},
-{"@type":"Question","name":"Что такое codice fiscale?","acceptedAnswer":{"@type":"Answer","text":"Итальянский налоговый номер — аналог ИНН. Нужен для аренды жилья, банковского счёта, школы, страховки и любых контрактов."}},
-{"@type":"Question","name":"Как прикрепиться к бесплатной медицине в Италии?","acceptedAnswer":{"@type":"Answer","text":"После оформления Residenza выбираете врача общей практики (medico di base) в системе SSN."}}]
+  "mainEntity": [
+    {"@type":"Question","name":"Что нужно сделать сразу после переезда в Италию?","acceptedAnswer":{"@type":"Answer","text":"Получить codice fiscale, зарегистрироваться по адресу (Residenza), открыть банковский счёт и оформить медицинскую страховку."}},
+    {"@type":"Question","name":"Что такое codice fiscale?","acceptedAnswer":{"@type":"Answer","text":"Итальянский налоговый номер — аналог ИНН. Нужен для аренды жилья, банковского счёта, школы, страховки и любых контрактов."}},
+    {"@type":"Question","name":"Как прикрепиться к бесплатной медицине в Италии?","acceptedAnswer":{"@type":"Answer","text":"После оформления Residenza выбираете врача общей практики (medico di base) в системе SSN."}}
+  ]
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -48,89 +50,125 @@
 </div>
 
 <div class="benefits-strip">
-  <div class="benefit-item"><div class="benefit-icon">🏥</div>Бесплатная медицина для всей семьи</div>
-  <div class="benefit-item"><div class="benefit-icon">🛂</div>Свободное перемещение по Шенгену</div>
-  <div class="benefit-item"><div class="benefit-icon">🏠</div>ПМЖ через 5 лет</div>
-  <div class="benefit-item"><div class="benefit-icon">🎓</div>Образование европейского уровня</div>
-  <div class="benefit-item"><div class="benefit-icon">🇮🇹</div>Гражданство через 10 лет</div>
+  <div class="benefit-item"><div class="benefit-icon">🪪</div>Codice Fiscale за 1–2 дня после приезда</div>
+  <div class="benefit-item"><div class="benefit-icon">🏥</div>Подключение к бесплатной медицине SSN</div>
+  <div class="benefit-item"><div class="benefit-icon">🏠</div>Помощь с подбором жилья и арендой</div>
+  <div class="benefit-item"><div class="benefit-icon">🏦</div>Открытие банковского счёта в первые дни</div>
+  <div class="benefit-item"><div class="benefit-icon">🗣️</div>Сопровождение на всех встречах с госорганами</div>
 </div>
 
-<section class="services" style="padding-top:80px;">
+<section class="visas">
   <div class="section-tag">Что входит в услугу</div>
   <h2 class="section-title">Все задачи<br>первого месяца</h2>
   <p class="section-sub">После получения визы начинается самое важное. Мы остаёмся рядом и решаем каждый вопрос.</p>
-<div class="services-grid">
-  <div class="service-card">
-    <div class="service-icon-wrap">🏡</div>
-    <div class="service-title">Подбор жилья</div>
-    <p class="service-desc">Помогаем найти квартиру или дом в нужном городе. Проверяем договор аренды, переводим условия, сопровождаем при подписании.</p>
-    <div class="service-arrow">→</div>
+  <div class="visa-grid">
+    <div class="visa-card">
+      <div class="visa-flag">🏡</div>
+      <div class="visa-name">Подбор жилья</div>
+      <div class="visa-sub">Alloggio</div>
+      <ul class="visa-features">
+        <li>Поиск квартиры или дома в нужном городе</li>
+        <li>Проверка договора аренды</li>
+        <li>Переговоры с арендодателем</li>
+        <li>Сопровождение при подписании</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🪪</div>
+      <div class="visa-name">Codice Fiscale</div>
+      <div class="visa-sub">Agenzia delle Entrate</div>
+      <ul class="visa-features">
+        <li>Итальянский налоговый номер</li>
+        <li>Получаем за 1–2 дня после приезда</li>
+        <li>Нужен для банка, школы, страховки</li>
+        <li>Оформляем в первую очередь</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🏛️</div>
+      <div class="visa-name">Регистрация по адресу</div>
+      <div class="visa-sub">Residenza — Comune</div>
+      <ul class="visa-features">
+        <li>Прописка по итальянскому адресу</li>
+        <li>Необходима для ВНЖ, школы, SSN</li>
+        <li>Подаём заявление в муниципалитет</li>
+        <li>Инспекция жилья от Comune</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🏦</div>
+      <div class="visa-name">Банковский счёт</div>
+      <div class="visa-sub">Conto Bancario</div>
+      <ul class="visa-features">
+        <li>Помогаем выбрать подходящий банк</li>
+        <li>Сопровождаем в отделение</li>
+        <li>Онлайн-банкинг и дебетовая карта</li>
+        <li>Открываем с codice fiscale</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🏥</div>
+      <div class="visa-name">Медицина и страховка</div>
+      <div class="visa-sub">SSN / Assicurazione</div>
+      <ul class="visa-features">
+        <li>Прикрепление к врачу общей практики</li>
+        <li>Регистрация в системе бесплатной медицины</li>
+        <li>Частная страховка до оформления ВНЖ</li>
+        <li>Выбор педиатра для детей</li>
+      </ul>
+    </div>
+    <div class="visa-card">
+      <div class="visa-flag">🗣️</div>
+      <div class="visa-name">Сопровождение в госорганах</div>
+      <div class="visa-sub">Questura / Comune / Entrate</div>
+      <ul class="visa-features">
+        <li>Переводим на всех встречах с Questura</li>
+        <li>Сопровождение в Comune и Agenzia</li>
+        <li>Объясняем итальянскую бюрократию</li>
+        <li>Остаёмся на связи после переезда</li>
+      </ul>
+    </div>
   </div>
-  <div class="service-card">
-    <div class="service-icon-wrap">🪪</div>
-    <div class="service-title">Codice Fiscale</div>
-    <p class="service-desc">Итальянский налоговый номер — первый документ для всего остального. Получаем в первые дни после приезда в Agenzia delle Entrate.</p>
-    <div class="service-arrow">→</div>
-  </div>
-  <div class="service-card">
-    <div class="service-icon-wrap">🏛️</div>
-    <div class="service-title">Регистрация по адресу</div>
-    <p class="service-desc">Оформление Residenza в муниципалитете. Необходима для получения ВНЖ, записи в школу, страховки и других услуг.</p>
-    <div class="service-arrow">→</div>
-  </div>
-  <div class="service-card">
-    <div class="service-icon-wrap">🏦</div>
-    <div class="service-title">Банковский счёт</div>
-    <p class="service-desc">Помогаем выбрать банк и открыть счёт. Сопровождаем в отделение, переводим документы, помогаем с онлайн-банкингом.</p>
-    <div class="service-arrow">→</div>
-  </div>
-  <div class="service-card">
-    <div class="service-icon-wrap">🏥</div>
-    <div class="service-title">Медицинская страховка</div>
-    <p class="service-desc">Оформляем медицинскую страховку или регистрацию в системе SSN (бесплатная медицина). Прикрепление к врачу общей практики.</p>
-    <div class="service-arrow">→</div>
-  </div>
-  <div class="service-card">
-    <div class="service-icon-wrap">📱</div>
-    <div class="service-title">Связь и коммунальные услуги</div>
-    <p class="service-desc">Помогаем с подключением телефона, интернета, оформлением договоров на коммунальные услуги.</p>
-    <div class="service-arrow">→</div>
-  </div>
-  <div class="service-card">
-    <div class="service-icon-wrap">🚗</div>
-    <div class="service-title">Транспорт и логистика</div>
-    <p class="service-desc">Консультации по правам, автомобилям, общественному транспорту в итальянских городах.</p>
-    <div class="service-arrow">→</div>
-  </div>
-  <div class="service-card">
-    <div class="service-icon-wrap">🗣️</div>
-    <div class="service-title">Сопровождение в госорганах</div>
-    <p class="service-desc">Переводим и объясняем на встречах с Questura, Comune, Agenzia delle Entrate и другими учреждениями.</p>
-    <div class="service-arrow">→</div>
-  </div>
-</div>
 </section>
 
 <section class="process">
   <div class="section-tag">Как мы работаем</div>
-  <h2 class="section-title">От звонка до <em>результата</em><br>— четыре шага</h2>
-  <p class="section-sub">Берём на себя все этапы — вы только предоставляете документы и получаете результат.</p>
+  <h2 class="section-title">От первого дня<br>до полной <em>интеграции</em></h2>
+  <p class="section-sub">Помогаем выстроить жизнь в Италии шаг за шагом — от первого документа до записи ребёнка в школу.</p>
+  <div class="stat-row">
+    <div class="stat-item">
+      <div class="stat-num">1–2</div>
+      <div class="stat-label">дня — получаем codice fiscale<br>после приезда</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">семей помогли<br>обустроиться в Италии</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">30</div>
+      <div class="stat-label">задач первого месяца —<br>берём все на себя</div>
+    </div>
+  </div>
   <div class="process-steps">
     <div class="process-step active">
       <div class="step-num">1</div>
-      <div class="step-content"><div class="step-title">Консультация</div><p class="step-desc">Разбираем вашу ситуацию, объясняем требования и называем точные сроки и стоимость.</p></div>
+      <div class="step-content"><div class="step-title">Планирование</div><p class="step-desc">Составляем хронологию задач до и после переезда. Готовимся заранее.</p></div>
     </div>
     <div class="process-step">
       <div class="step-num">2</div>
-      <div class="step-content"><div class="step-title">Документы</div><p class="step-desc">Составляем полный список, помогаем собрать, переводим и заверяем всё необходимое.</p></div>
+      <div class="step-content"><div class="step-title">Прибытие</div><p class="step-desc">Codice fiscale и временное размещение — первые 1–2 дня после приезда.</p></div>
     </div>
     <div class="process-step">
       <div class="step-num">3</div>
-      <div class="step-content"><div class="step-title">Подача</div><p class="step-desc">Сопровождаем подачу, контролируем сроки, отвечаем на запросы органов.</p></div>
+      <div class="step-content"><div class="step-title">Регистрация</div><p class="step-desc">Residenza в Comune, оформление ВНЖ, прикрепление к SSN.</p></div>
     </div>
     <div class="process-step">
       <div class="step-num">4</div>
-      <div class="step-content"><div class="step-title">Результат</div><p class="step-desc">Получаете документ на руки. Остаёмся на связи для продления и следующих шагов.</p></div>
+      <div class="step-content"><div class="step-title">Финансы</div><p class="step-desc">Банковский счёт, страховка, коммунальные услуги, мобильный телефон.</p></div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">5</div>
+      <div class="step-content"><div class="step-title">Интеграция</div><p class="step-desc">Школа для детей, транспорт, бытовые вопросы. Остаёмся рядом.</p></div>
     </div>
   </div>
 </section>
@@ -139,12 +177,16 @@
   <div class="section-tag">Частые вопросы</div>
   <h2 class="section-title">Отвечаем на главное</h2>
   <div class="faq-grid">
-    <div><div class="faq-item"><div class="faq-q">Что такое codice fiscale и зачем он нужен?</div><p class="faq-a">Итальянский налоговый номер — аналог ИНН. Нужен для аренды жилья, открытия счёта, записи ребёнка в школу, оформления страховки и любых контрактов. Получаем в первые дни после приезда.</p></div>
-<div class="faq-item"><div class="faq-q">Сколько стоит аренда жилья в Италии?</div><p class="faq-a">Зависит от города. Милан — от €1000/мес за однокомнатную. Рим — от €800. Небольшие города — от €400–500. Помогаем найти оптимальный вариант под ваш бюджет.</p></div>
-<div class="faq-item"><div class="faq-q">Нужно ли знать итальянский для первых шагов?</div><p class="faq-a">Нет. Сопровождаем на всех встречах с государственными органами и берём коммуникацию на себя.</p></div></div>
-    <div><div class="faq-item"><div class="faq-q">Как работает бесплатная медицина в Италии?</div><p class="faq-a">После регистрации по адресу (Residenza) вы вправе прикрепиться к системе SSN. Выбираете врача общей практики (medico di base) — он направляет к специалистам. Помогаем пройти весь процесс.</p></div>
-<div class="faq-item"><div class="faq-q">Можно ли открыть счёт без ВНЖ?</div><p class="faq-a">Да, некоторые банки открывают счёт по загранпаспорту и codice fiscale. Помогаем выбрать подходящий вариант для вашей ситуации.</p></div>
-<div class="faq-item"><div class="faq-q">Сопровождаете после переезда?</div><p class="faq-a">Да. Остаёмся на связи после получения документов: помогаем с продлением ВНЖ, налогами, вопросами интеграции.</p></div></div>
+    <div>
+      <div class="faq-item"><div class="faq-q">Что такое codice fiscale и зачем он нужен?</div><p class="faq-a">Итальянский налоговый номер — аналог ИНН. Нужен для аренды жилья, открытия счёта, записи ребёнка в школу, оформления страховки и любых контрактов. Получаем в первые дни после приезда.</p></div>
+      <div class="faq-item"><div class="faq-q">Сколько стоит аренда жилья в Италии?</div><p class="faq-a">Зависит от города. Милан — от €1000/мес за однокомнатную. Рим — от €800. Небольшие города — от €400–500. Помогаем найти оптимальный вариант под ваш бюджет.</p></div>
+      <div class="faq-item"><div class="faq-q">Нужно ли знать итальянский для первых шагов?</div><p class="faq-a">Нет. Сопровождаем на всех встречах с государственными органами и берём коммуникацию на себя.</p></div>
+    </div>
+    <div>
+      <div class="faq-item"><div class="faq-q">Как работает бесплатная медицина в Италии?</div><p class="faq-a">После регистрации по адресу (Residenza) вы вправе прикрепиться к системе SSN. Выбираете врача общей практики (medico di base) — он направляет к специалистам. Помогаем пройти весь процесс.</p></div>
+      <div class="faq-item"><div class="faq-q">Можно ли открыть счёт без ВНЖ?</div><p class="faq-a">Да, некоторые банки открывают счёт по загранпаспорту и codice fiscale. Помогаем выбрать подходящий вариант для вашей ситуации.</p></div>
+      <div class="faq-item"><div class="faq-q">Сопровождаете после переезда?</div><p class="faq-a">Да. Остаёмся на связи после получения документов: помогаем с продлением ВНЖ, налогами, вопросами интеграции.</p></div>
+    </div>
   </div>
 </section>
 
@@ -160,6 +202,6 @@
 
 <footer id="footer"></footer>
 <script src="components.js"></script>
-<script>initPage('services');</script>
+<script>initPage('service-relocation');</script>
 </body>
 </html>
