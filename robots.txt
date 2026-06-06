@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://italiadom.ru/sitemap.xml
+Sitemap: https://documentare.ru/sitemap.xml

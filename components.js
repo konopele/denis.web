@@ -11,6 +11,15 @@
   gtag('config', 'G-XBMERL14JE');
 })();
 
+// Favicon
+(function() {
+  var link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/svg+xml';
+  link.href = 'favicon.svg';
+  document.head.appendChild(link);
+})();
+
 function initPage(active) {
 
   // NAV — "Услуги" stays active for all service sub-pages too
